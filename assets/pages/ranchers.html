@@ -3,429 +3,306 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Ranchers - AniTec</title>
+    <meta name="description" content="AniTec for ranchers: digitize your livestock management, control health, reproduction and productivity of your herd with innovative technology designed for you." />
+    <meta name="keywords" content="ranchers, livestock management, herd control, animal records, animal health, livestock reproduction, traceability, livestock productivity, AniTec for ranchers" />
+    <meta name="author" content="AniTec" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
+
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="For Ranchers - AniTec | Livestock Management Platform" />
+    <meta property="og:title" content="For Ranchers - AniTec" />
     <meta property="og:description" content="AniTec for ranchers: digitize your livestock management, control health, reproduction and productivity of your herd with innovative technology designed for you." />
     <meta property="og:site_name" content="AniTec" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="For Ranchers - AniTec | Livestock Management Platform" />
-    <meta property="twitter:description" content="AniTec for ranchers: digitize your livestock management, control health, reproduction and productivity of your herd with innovative technology." />
-    
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="For Ranchers - AniTec" />
+    <meta property="twitter:description" content="AniTec for ranchers: digitize your livestock management, control health, reproduction and productivity of your herd with innovative technology designed for you." />
+
     <!-- Favicons -->
-    <link rel="icon" href="../images/logo.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#79B267" />
-    <meta name="msapplication-TileColor" content="#79B267" />
-    <title>For Ranchers - AniTec</title>
-    <meta
-      name="description"
-      content="AniTec for ranchers: digitize your livestock management, control health, reproduction and productivity of your herd with innovative technology designed for you."
-    />
-    <meta
-      name="keywords"
-      content="ranchers, livestock management, herd control, animal records, animal health, livestock reproduction, traceability, livestock productivity, AniTec for ranchers"
-    />
-    <meta name="author" content="AniTec" />
-    <link rel="icon" type="image/x-icon" href="../images/logo.ico" />
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../images/logo.png" />
+    <meta name="theme-color" content="#1d130e" />
+    <meta name="msapplication-TileColor" content="#1d130e" />
+
+    <script>document.documentElement.classList.add("js");</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/inner.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="../../index.html" class="logo">
-          <img src="../images/logo.png" alt="AniTec Logo" />
-          <span class="logo-text">AniTec</span>
-        </a>
-        <ul class="nav-menu">
-          <li><a href="../../index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-          <li><a href="ranchers.html" class="active" data-i18n="nav.ranchers">Ranchers</a></li>
-          <li><a href="veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a></li>
-          <li><a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
-        </ul>
-        <div class="nav-actions">
-          <div class="lang-switcher">
-            <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
-            <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
-          </div>
-          <a href="../../index.html#pricing" class="btn btn-success btn-sm" data-i18n="nav.startFree"
-            >Download</a
-          >
-          <button class="mobile-menu-btn">
-            <i class="bi bi-list"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
+    <a class="skip-link" href="#main" data-i18n="v2.skip">Skip to content</a>
 
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu">
-      <div class="mobile-menu-header">
-        <span
-          style="
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--primary-brown);
-          "
-          data-i18n="nav.menu">Menu</span
-        >
-        <button class="mobile-menu-close">
-          <i class="bi bi-x-lg"></i>
+    <header class="nav" id="nav">
+      <a href="../../index.html" class="nav-logo" aria-label="AniTec">
+        <img src="../images/logo.png" alt="" width="34" height="34" />
+        <span>AniTec</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../../index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About Us</a>
+        <a href="ranchers.html" class="active" data-i18n="nav.ranchers">Ranchers</a>
+        <a href="veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a>
+        <a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
+        </div>
+        <a href="../../index.html#download" class="pill pill-light pill-sm" data-i18n="nav.startFree">Download</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
         </button>
       </div>
-      <ul class="mobile-menu-links">
-        <li><a href="../../index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-        <li><a href="ranchers.html" data-i18n="nav.ranchers">Ranchers</a></li>
-        <li><a href="veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a></li>
-        <li><a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
-      </ul>
-      <div class="mobile-menu-cta">
-        <a href="../../index.html#pricing" class="btn btn-success" data-i18n="nav.startFree">Download</a>
-      </div>
-      <div class="mobile-lang-switcher">
-        <button class="lang-btn" id="mobile-lang-en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn" id="mobile-lang-es" onclick="setLanguage('es')">ES</button>
+    </header>
+
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu-links" aria-label="Mobile">
+        <a href="../../index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About Us</a>
+        <a href="ranchers.html" data-i18n="nav.ranchers">Ranchers</a>
+        <a href="veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a>
+        <a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+      </nav>
+      <div class="menu-foot">
+        <a href="../../index.html#download" class="pill pill-light" data-i18n="nav.startFree">Download</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang-btn" id="mobile-lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" id="mobile-lang-es" onclick="setLanguage('es')">ES</button>
+        </div>
       </div>
     </div>
 
-    <section class="rancher-hero">
-      <div class="container">
-        <div class="rancher-hero-content">
-          <div class="rancher-hero-text">
-            <div class="hero-badge">
-              <i class="bi bi-person-check"></i>
-              <span data-i18n="ranchers.heroBadge">For Ranchers</span>
-            </div>
-            <h1 class="rancher-title">
-              <span data-i18n="ranchers.heroTitle1">Manage your</span><span class="highlight" data-i18n="ranchers.heroTitle2"> Livestock</span><span data-i18n="ranchers.heroTitle3"> from your Phone</span>
-            </h1>
-            <p class="rancher-description" data-i18n="ranchers.heroDesc">AniTec is designed for small and medium ranchers who want to replace notebooks and loose papers with a simple app.</p>
-            <div class="rancher-features">
-              <div class="rancher-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="ranchers.feat1">Individual and batch animal registration</span>
-              </div>
-              <div class="rancher-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="ranchers.feat2">Health records with follow-up dates</span>
-              </div>
-              <div class="rancher-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="ranchers.feat3">Income, expenses and balance in soles</span>
-              </div>
-              <div class="rancher-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="ranchers.feat4">Works with limited signal</span>
-              </div>
-            </div>
-            <div class="rancher-buttons">
-              <a href="#benefits" class="btn btn-success">
-                <i class="bi bi-arrow-down"></i>
-                <span data-i18n="ranchers.viewBenefits">View Benefits</span>
-              </a>
-              <a href="../../index.html#download" class="btn btn-secondary">
-                <i class="bi bi-rocket-takeoff"></i>
-                <span data-i18n="ranchers.tryFree">Download the App</span>
-              </a>
-            </div>
-          </div>
-          <div class="rancher-hero-image">
-            <div class="hero-image-wrapper">
-              <img
-                src="../images/ranchers/rancher/rancher-1.png"
-                alt="Rancher using AniTec"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <main id="main">
 
-    <section class="benefits-rancher" id="benefits">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-gift"></i>
-            <span data-i18n="ranchers.benefitsSubtitle">Benefits</span>
-          </span>
-          <h2 class="section-title" data-i18n="ranchers.benefitsTitle">Why AniTec for Ranchers?</h2>
-          <p class="section-description" data-i18n="ranchers.benefitsDesc">What the app helps you do every day.</p>
+      <section class="hero page-hero">
+        <img class="hero-bg" src="../images/photos/rancher-feeding-calf.webp" alt="" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><i class="bi bi-person-check"></i> <span data-i18n="ranchers.heroBadge">For Ranchers</span></p>
+            <h1 class="page-title"><span data-i18n="ranchers.heroTitle1">Manage your</span><em data-i18n="ranchers.heroTitle2"> Livestock</em><span data-i18n="ranchers.heroTitle3"> from your Phone</span></h1>
+            <p class="hero-lead" data-i18n="ranchers.heroDesc">AniTec is designed for small and medium ranchers who want to replace notebooks and loose papers with a simple app.</p>
+            <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.feat1">Individual and batch animal registration</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.feat2">Health records with follow-up dates</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.feat3">Income, expenses and balance in soles</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.feat4">Works with limited signal</span></li>
+          </ul>
+            <div class="hero-cta">
+              <a href="#benefits" class="pill pill-cream"><span data-i18n="ranchers.viewBenefits">View Benefits</span> <i class="bi bi-arrow-down-short"></i></a>
+              <a href="../../index.html#download" class="pill pill-ghost" data-i18n="ranchers.tryFree">Download the App</a>
+            </div>
+          </div>
+          <aside class="hero-side">
+            <div class="phone phone-hero" aria-hidden="true">
+              <img src="../images/app/android-farms.png" alt="" width="540" height="1200" />
+            </div>
+          </aside>
         </div>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-qr-code"></i>
-            </div>
-            <h3 data-i18n="ranchers.benef1Title">Individual Records</h3>
-            <p data-i18n="ranchers.benef1Desc">Identify each animal with a code and record its species, breed, sex, weight, status, farm, corral and a photo.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-calendar-heart"></i>
-            </div>
-            <h3 data-i18n="ranchers.benef2Title">Follow-up Dates</h3>
-            <p data-i18n="ranchers.benef2Desc">Save the date of the next check or vaccine so you can see what is pending.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-heart-pulse"></i>
-            </div>
-            <h3 data-i18n="ranchers.benef3Title">Health Control</h3>
-            <p data-i18n="ranchers.benef3Desc">Keep the health history of your animals: incidents, vaccines, treatments, diagnoses and prescriptions.</p>
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-bag-heart"></i>
-            </div>
-            <h3 data-i18n="ranchers.benef4Title">Scan the Ear Tag</h3>
-            <p data-i18n="ranchers.benef4Desc">Find an animal by scanning its tag with the camera, or by typing its code.</p>
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-cash-stack"></i>
-            </div>
-            <h3 data-i18n="ranchers.benef5Title">Finances</h3>
-            <p data-i18n="ranchers.benef5Desc">Record income and expenses and see your balance in soles.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-graph-up-arrow"></i>
-            </div>
-            <h3 data-i18n="ranchers.benef6Title">Herd Overview</h3>
-            <p data-i18n="ranchers.benef6Desc">See how many animals are healthy, under observation or in treatment, and your records by type.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-
-    <section class="modules-rancher">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-grid"></i>
-            <span data-i18n="ranchers.modulesTitle">Everything you can manage</span>
-          </span>
-          <h2 class="section-title" data-i18n="ranchers.modulesTitle">Everything you can manage</h2>
-        </div>
-        <div class="modules-grid">
-          <div class="module-card">
-            <div class="module-image">
-              <img
-                src="../images/ranchers/management/management-1.png"
-                alt="Animal Management"
-              />
-              <div class="module-overlay">
-                <span data-i18n="ranchers.mod1Title">Animal Management</span>
+      <section class="section" id="benefits">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="ranchers.benefitsSubtitle">Benefits</p>
+            <h2 class="h2" data-i18n="ranchers.benefitsTitle">Why AniTec for Ranchers?</h2>
+          <p class="lead" data-i18n="ranchers.benefitsDesc">What the app helps you do every day.</p>
+          </header>
+          <div class="bento">
+            <article class="tile span-2 reveal">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-qr-code"></i></span>
+                <h3 data-i18n="ranchers.benef1Title">Individual Records</h3>
+                <p data-i18n="ranchers.benef1Desc">Identify each animal with a code and record its species, breed, sex, weight, status, farm, corral and a photo.</p>
               </div>
-            </div>
-            <h3 data-i18n="ranchers.mod1Title">Animal Management</h3>
-            <p data-i18n="ranchers.mod1Desc">Register animals one by one or in batches, organize them by farm and corral and search for them.</p>
-            <ul>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat1">Individual and batch registration</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat2">Farms and corrals</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat3">Search and corral filter</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat4">Record with photo</span>
-              </li>
-            </ul>
-          </div>
-          <div class="module-card">
-            <div class="module-image">
-              <img
-                src="../images/ranchers/management/management-2.png"
-                alt="Health Control"
-              />
-              <div class="module-overlay">
-                <span data-i18n="ranchers.mod2Title">Health Control</span>
+            </article>
+            <article class="tile span-2 reveal">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-calendar-heart"></i></span>
+                <h3 data-i18n="ranchers.benef2Title">Follow-up Dates</h3>
+                <p data-i18n="ranchers.benef2Desc">Save the date of the next check or vaccine so you can see what is pending.</p>
               </div>
-            </div>
-            <h3 data-i18n="ranchers.mod2Title">Health Control</h3>
-            <p data-i18n="ranchers.mod2Desc">Keep the health records of your herd in order.</p>
-            <ul>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat5">Incidents and vaccines</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat6">Treatments and diagnoses</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat7">Prescriptions</span>
-              </li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat8">Follow-up dates</span></li>
-            </ul>
-          </div>
-          <div class="module-card">
-            <div class="module-image">
-              <img
-                src="../images/ranchers/management/management-3.png"
-                alt="Reproduction"
-              />
-              <div class="module-overlay">
-                <span data-i18n="ranchers.mod3Title">Activities</span>
+            </article>
+            <article class="tile span-2 reveal">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-heart-pulse"></i></span>
+                <h3 data-i18n="ranchers.benef3Title">Health Control</h3>
+                <p data-i18n="ranchers.benef3Desc">Keep the health history of your animals: incidents, vaccines, treatments, diagnoses and prescriptions.</p>
               </div>
-            </div>
-            <h3 data-i18n="ranchers.mod3Title">Activities</h3>
-            <p data-i18n="ranchers.mod3Desc">Plan the tasks of your farm.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat9">Scheduled tasks</span></li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat10">Priority and status</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat11">Upcoming first</span>
-              </li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat12">Overdue highlighted</span></li>
-            </ul>
-          </div>
-          <div class="module-card">
-            <div class="module-image">
-              <img
-                src="../images/ranchers/management/management-4.png"
-                alt="Economic Management"
-              />
-              <div class="module-overlay">
-                <span data-i18n="ranchers.mod4Title">Finances</span>
+            </article>
+            <article class="tile span-2 reveal">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-qr-code-scan"></i></span>
+                <h3 data-i18n="ranchers.benef4Title">Scan the Ear Tag</h3>
+                <p data-i18n="ranchers.benef4Desc">Find an animal by scanning its tag with the camera, or by typing its code.</p>
               </div>
-            </div>
-            <h3 data-i18n="ranchers.mod4Title">Finances</h3>
-            <p data-i18n="ranchers.mod4Desc">Know how your business is doing.</p>
-            <ul>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat13">Income records</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat14">Expense records</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat15">Balance in soles</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i> <span data-i18n="ranchers.modFeat16">Records by date</span>
-              </li>
-            </ul>
+            </article>
+            <article class="tile span-2 reveal">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-cash-stack"></i></span>
+                <h3 data-i18n="ranchers.benef5Title">Finances</h3>
+                <p data-i18n="ranchers.benef5Desc">Record income and expenses and see your balance in soles.</p>
+              </div>
+            </article>
+            <article class="tile span-2 reveal">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                <h3 data-i18n="ranchers.benef6Title">Herd Overview</h3>
+                <p data-i18n="ranchers.benef6Desc">See how many animals are healthy, under observation or in treatment, and your records by type.</p>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section class="section" style="background: var(--espresso-2)">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="ranchers.modulesTitle">Everything you can manage</p>
+            <h2 class="h2" data-i18n="ranchers.modulesTitle">Everything you can manage</h2>
+          </header>
 
-    <section class="cta">
-      <div class="cta-wrapper">
-        <div class="cta-image">
-          <img
-            src="../images/ranchers/rancher/rancher-2.png"
-            alt="Successful rancher with AniTec"
-          />
-          <div class="cta-image-overlay"></div>
+          <article class="module reveal">
+            <div class="module-stage">
+              <div class="phone" aria-hidden="true"><img src="../images/app/android-farms.png" alt="" loading="lazy" width="540" height="1200" /></div>
+            </div>
+            <div>
+              <span class="module-n">01</span>
+              <h3 data-i18n="ranchers.mod1Title">Animal Management</h3>
+              <p data-i18n="ranchers.mod1Desc">Register animals one by one or in batches, organize them by farm and corral and search for them.</p>
+              <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat1">Individual and batch registration</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat2">Farms and corrals</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat3">Search and corral filter</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat4">Record with photo</span></li>
+          </ul>
+            </div>
+          </article>
+          <article class="module reveal">
+            <div class="module-stage">
+              <div class="phone" aria-hidden="true"><img src="../images/app/android-health.png" alt="" loading="lazy" width="540" height="1200" /></div>
+            </div>
+            <div>
+              <span class="module-n">02</span>
+              <h3 data-i18n="ranchers.mod2Title">Health Control</h3>
+              <p data-i18n="ranchers.mod2Desc">Keep the health records of your herd in order.</p>
+              <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat5">Incidents and vaccines</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat6">Treatments and diagnoses</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat7">Prescriptions</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat8">Follow-up dates</span></li>
+          </ul>
+            </div>
+          </article>
+          <article class="module reveal">
+            <div class="module-stage">
+              <div class="phone" aria-hidden="true"><img src="../images/app/android-activities.png" alt="" loading="lazy" width="540" height="1200" /></div>
+            </div>
+            <div>
+              <span class="module-n">03</span>
+              <h3 data-i18n="ranchers.mod3Title">Activities</h3>
+              <p data-i18n="ranchers.mod3Desc">Plan the tasks of your farm.</p>
+              <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat9">Scheduled tasks</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat10">Priority and status</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat11">Upcoming first</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat12">Overdue highlighted</span></li>
+          </ul>
+            </div>
+          </article>
+          <article class="module reveal">
+            <div class="module-stage">
+              <div class="phone" aria-hidden="true"><img src="../images/app/android-finance.png" alt="" loading="lazy" width="540" height="1200" /></div>
+            </div>
+            <div>
+              <span class="module-n">04</span>
+              <h3 data-i18n="ranchers.mod4Title">Finances</h3>
+              <p data-i18n="ranchers.mod4Desc">Know how your business is doing.</p>
+              <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat13">Income records</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat14">Expense records</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat15">Balance in soles</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.modFeat16">Records by date</span></li>
+          </ul>
+            </div>
+          </article>
         </div>
-        <div class="cta-content">
-          <div class="cta-badge">
-            <i class="bi bi-stars"></i>
-            <span data-i18n="ranchers.ctaBadge">Android app</span>
-          </div>
-          <h2 class="cta-title" data-i18n="ranchers.ctaTitle">Ready to take your ranch to your phone?</h2>
-          <p class="cta-description" data-i18n="ranchers.ctaDesc">Download the app, choose the rancher role and start registering your farms and animals.</p>
-          <div class="cta-features">
-            <div class="cta-feature">
-              <i class="bi bi-check-circle-fill"></i>
-              <span data-i18n="ranchers.ctaFeat1">Choose your role when you sign up</span>
+      </section>
+
+      <section class="cta-band">
+        <img src="../images/photos/white-zebu.webp" alt="" loading="lazy" />
+        <div class="wrap">
+          <div class="cta-inner reveal">
+            <p class="eyebrow"><i class="bi bi-stars"></i> <span data-i18n="ranchers.ctaBadge">Android app</span></p>
+            <h2 class="h2" data-i18n="ranchers.ctaTitle">Ready to take your ranch to your phone?</h2>
+            <p class="lead" data-i18n="ranchers.ctaDesc">Download the app, choose the rancher role and start registering your farms and animals.</p>
+            <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.ctaFeat1">Choose your role when you sign up</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.ctaFeat2">English and Spanish</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="ranchers.ctaFeat3">Works with limited signal</span></li>
+          </ul>
+            <div class="hero-cta">
+              <a href="../../index.html#download" class="pill pill-cream"><span data-i18n="ranchers.startFree">Download the App</span> <i class="bi bi-arrow-up-right"></i></a>
+              <a href="../../index.html#features" class="pill pill-ghost" data-i18n="ranchers.seeHow">See the Features</a>
             </div>
-            <div class="cta-feature">
-              <i class="bi bi-check-circle-fill"></i>
-              <span data-i18n="ranchers.ctaFeat2">English and Spanish</span>
-            </div>
-            <div class="cta-feature">
-              <i class="bi bi-check-circle-fill"></i>
-              <span data-i18n="ranchers.ctaFeat3">Works with limited signal</span>
-            </div>
-          </div>
-          <div class="cta-buttons">
-            <a href="../../index.html#download" class="btn btn-primary">
-              <i class="bi bi-rocket-takeoff"></i>
-              <span data-i18n="ranchers.startFree">Download the App</span>
-            </a>
-            <a href="../../index.html#features" class="btn btn-outline-light">
-              <i class="bi bi-play-circle"></i>
-              <span data-i18n="ranchers.seeHow">See the Features</span>
-            </a>
-          </div>
           <p class="cta-note" data-i18n="ranchers.ctaNote">Your session is stored encrypted on your device.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-about">
-            <a href="../../index.html" class="logo">
-              <img src="../../assets/images/logo.png" alt="AniTec Logo" />
-              <span class="logo-text">AniTec</span>
-            </a>
-            <p class="footer-description" data-i18n="footer.desc">AniTec is a livestock management app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal.</p>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.product">Product</h4>
-            <ul class="footer-links">
-              <li><a href="../../index.html#features" data-i18n="footer.features">Features</a></li>
-              <li><a href="../../index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
-              <li><a href="../../index.html#download" data-i18n="footer.download">Download</a></li>
-              <li><a href="ranchers.html" data-i18n="footer.forRanchers">For Ranchers</a></li>
-              <li><a href="veterinarians.html" data-i18n="footer.forVets">For Veterinarians</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.project">The Project</h4>
-            <ul class="footer-links">
-              <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
-              <li><a href="https://github.com/ADM-1ACC0238-2620-13975-Grupo01" target="_blank" rel="noreferrer" data-i18n="footer.github">Source code</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.legal">Legal</h4>
-            <ul class="footer-links">
-              <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
-            </ul>
-          </div>
+    <footer class="footer" id="contact">
+      <div class="wrap footer-grid">
+        <div class="footer-about">
+          <a href="../../index.html" class="nav-logo">
+            <img src="../images/logo.png" alt="" width="34" height="34" />
+            <span>AniTec</span>
+          </a>
+          <p data-i18n="footer.desc">AniTec is a livestock management app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal.</p>
         </div>
-        <div class="footer-bottom">
-          <p class="footer-copyright" data-i18n="footer.copyright">© 2026 AniTec. All rights reserved.</p>
-          <div class="footer-legal">
-            <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
-          </div>
+        <div>
+          <h4 data-i18n="footer.product">Product</h4>
+          <ul>
+            <li><a href="../../index.html#features" data-i18n="footer.features">Features</a></li>
+            <li><a href="../../index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
+            <li><a href="../../index.html#download" data-i18n="footer.download">Download</a></li>
+            <li><a href="ranchers.html" data-i18n="footer.forRanchers">For Ranchers</a></li>
+            <li><a href="veterinarians.html" data-i18n="footer.forVets">For Veterinarians</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.project">The Project</h4>
+          <ul>
+            <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="https://github.com/ADM-1ACC0238-2620-13975-Grupo01" target="_blank" rel="noreferrer" data-i18n="footer.github">Source code</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <ul>
+            <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          </ul>
         </div>
       </div>
+      <div class="wrap footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 AniTec. All rights reserved.</p>
+        <p><a href="https://unsplash.com/license" target="_blank" rel="noreferrer" data-i18n="v2.photos">Photos: Unsplash contributors</a></p>
+      </div>
+      <div class="wordmark" aria-hidden="true">AniTec</div>
     </footer>
 
     <script src="../scripts/i18n.js"></script>
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/home-i18n.js"></script>
+    <script src="../scripts/home.js"></script>
   </body>
 </html>

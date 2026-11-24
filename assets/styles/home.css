@@ -1248,6 +1248,9 @@ p {
   .hero-inner {
     padding-top: 120px;
   }
+  .hero-shade {
+    background: linear-gradient(180deg, rgba(29, 19, 14, 0.72) 0%, rgba(29, 19, 14, 0.6) 45%, rgba(29, 19, 14, 0.96) 100%);
+  }
   .chapters {
     grid-template-columns: 1fr;
     gap: 12px;
