@@ -12,6 +12,7 @@ anitec-landing-page/
 ├── README.md                   # Este archivo
 └── assets/
     ├── images/                 # Imágenes del proyecto
+    │   ├── photos/             # Fotos de Unsplash (ver CREDITS.md)
     │   ├── logo.png
     │   ├── logo.ico
     │   ├── about-us/
@@ -25,6 +26,8 @@ anitec-landing-page/
     │   └── veterinarians.html
     ├── scripts/                # JavaScript
     │   ├── i18n.js
+    │   ├── home-i18n.js        # Textos del rediseño de la página principal
+    │   ├── home.js             # Intro, menú flotante, scroll y showcase de la página principal
     │   └── script.js
     └── styles/                 # Estilos CSS
         └── styles.css
