@@ -746,7 +746,7 @@ p {
   border-color: rgba(245, 240, 230, 0.35);
 }
 .tile-photo {
-  min-height: 380px;
+  min-height: 340px;
   background-image: var(--img);
   background-size: cover;
   background-position: center;
@@ -756,8 +756,28 @@ p {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(29, 19, 14, 0.05) 20%, rgba(29, 19, 14, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(29, 19, 14, 0.04) 12%, rgba(29, 19, 14, 0.55) 58%, rgba(29, 19, 14, 0.94) 100%);
 }
+.tile-photo.accent-green::before {
+  background: linear-gradient(180deg, rgba(29, 19, 14, 0.04) 12%, rgba(26, 58, 22, 0.6) 58%, rgba(22, 52, 18, 0.95) 100%);
+}
+.tile-photo.accent-brown::before {
+  background: linear-gradient(180deg, rgba(29, 19, 14, 0.04) 12%, rgba(86, 48, 22, 0.6) 58%, rgba(74, 40, 17, 0.95) 100%);
+}
+.tile-photo.accent-green {
+  border-color: rgba(121, 178, 103, 0.55);
+}
+.tile-photo.accent-brown {
+  border-color: rgba(146, 89, 48, 0.8);
+}
+.tile-photo.accent-green .tile-icon {
+  background: var(--green);
+  color: var(--espresso);
+}
+.tile-photo.accent-brown .tile-icon {
+  background: var(--brown);
+}
+
 .tile-green {
   background: var(--green);
   color: var(--espresso);
