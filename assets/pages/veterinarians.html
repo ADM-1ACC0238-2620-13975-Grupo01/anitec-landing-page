@@ -3,469 +3,319 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Veterinarians - AniTec</title>
+    <meta name="description" content="AniTec for veterinarians: manage the clinical history of your patients, coordinate with ranchers and optimize your professional practice with specialized technology." />
+    <meta name="keywords" content="veterinarians, veterinary management, clinical history, patient control, animal health, AniTec for veterinarians, veterinary software, veterinary clinic management" />
+    <meta name="author" content="AniTec" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
+
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="For Veterinarians - AniTec | Professional Livestock Management" />
-    <meta property="og:description" content="AniTec for veterinarians: manage clinical history of your patients, coordinate with ranchers and optimize your professional practice with specialized technology." />
+    <meta property="og:title" content="For Veterinarians - AniTec" />
+    <meta property="og:description" content="AniTec for veterinarians: manage the clinical history of your patients, coordinate with ranchers and optimize your professional practice with specialized technology." />
     <meta property="og:site_name" content="AniTec" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="For Veterinarians - AniTec | Professional Livestock Management" />
-    <meta property="twitter:description" content="AniTec for veterinarians: manage clinical history of your patients, coordinate with ranchers and optimize your professional practice." />
-    
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="For Veterinarians - AniTec" />
+    <meta property="twitter:description" content="AniTec for veterinarians: manage the clinical history of your patients, coordinate with ranchers and optimize your professional practice with specialized technology." />
+
     <!-- Favicons -->
-    <link rel="icon" href="../images/logo.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#79B267" />
-    <meta name="msapplication-TileColor" content="#79B267" />
-    <title>For Veterinarians - AniTec</title>
-    <meta
-      name="description"
-      content="AniTec for veterinarians: manage the clinical history of your patients, coordinate with ranchers and optimize your professional practice with specialized technology."
-    />
-    <meta
-      name="keywords"
-      content="veterinarians, veterinary management, clinical history, patient control, animal health, AniTec for veterinarians, veterinary software, veterinary clinic management"
-    />
-    <meta name="author" content="AniTec" />
-    <link rel="icon" type="image/x-icon" href="../images/logo.ico" />
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../images/logo.png" />
+    <meta name="theme-color" content="#1d130e" />
+    <meta name="msapplication-TileColor" content="#1d130e" />
+
+    <script>document.documentElement.classList.add("js");</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/inner.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="../../index.html" class="logo">
-          <img src="../images/logo.png" alt="AniTec Logo" />
-          <span class="logo-text">AniTec</span>
-        </a>
-        <ul class="nav-menu">
-          <li><a href="../../index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-          <li><a href="ranchers.html" data-i18n="nav.ranchers">Ranchers</a></li>
-          <li><a href="veterinarians.html" class="active" data-i18n="nav.veterinarians">Veterinarians</a></li>
-          <li><a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
-        </ul>
-        <div class="nav-actions">
-          <div class="lang-switcher">
-            <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
-            <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
-          </div>
-          <a href="../../index.html#pricing" class="btn btn-success btn-sm" data-i18n="nav.startFree"
-            >Download</a
-          >
-          <button class="mobile-menu-btn">
-            <i class="bi bi-list"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
+    <a class="skip-link" href="#main" data-i18n="v2.skip">Skip to content</a>
 
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu">
-      <div class="mobile-menu-header">
-        <span
-          style="
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--primary-brown);
-          "
-          data-i18n="nav.menu">Menu</span
-        >
-        <button class="mobile-menu-close">
-          <i class="bi bi-x-lg"></i>
+    <header class="nav" id="nav">
+      <a href="../../index.html" class="nav-logo" aria-label="AniTec">
+        <img src="../images/logo.png" alt="" width="34" height="34" />
+        <span>AniTec</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../../index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About Us</a>
+        <a href="ranchers.html" data-i18n="nav.ranchers">Ranchers</a>
+        <a href="veterinarians.html" class="active" data-i18n="nav.veterinarians">Veterinarians</a>
+        <a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
+        </div>
+        <a href="../../index.html#download" class="pill pill-light pill-sm" data-i18n="nav.startFree">Download</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
         </button>
       </div>
-      <ul class="mobile-menu-links">
-        <li><a href="../../index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-        <li><a href="ranchers.html" data-i18n="nav.ranchers">Ranchers</a></li>
-        <li><a href="veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a></li>
-        <li><a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
-      </ul>
-      <div class="mobile-menu-cta">
-        <a href="../../index.html#pricing" class="btn btn-success" data-i18n="nav.startFree">Download</a>
-      </div>
-      <div class="mobile-lang-switcher">
-        <button class="lang-btn" id="mobile-lang-en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn" id="mobile-lang-es" onclick="setLanguage('es')">ES</button>
+    </header>
+
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu-links" aria-label="Mobile">
+        <a href="../../index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About Us</a>
+        <a href="ranchers.html" data-i18n="nav.ranchers">Ranchers</a>
+        <a href="veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a>
+        <a href="../../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+      </nav>
+      <div class="menu-foot">
+        <a href="../../index.html#download" class="pill pill-light" data-i18n="nav.startFree">Download</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang-btn" id="mobile-lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" id="mobile-lang-es" onclick="setLanguage('es')">ES</button>
+        </div>
       </div>
     </div>
 
-    <section class="vet-hero">
-      <div class="container">
-        <div class="vet-hero-content">
-          <div class="vet-hero-text">
-            <div class="hero-badge">
-              <i class="bi bi-person-check"></i>
-              <span data-i18n="vets.heroBadge">For Veterinarians</span>
-            </div>
-            <h1 class="vet-title">
-              <span data-i18n="vets.heroTitle1">Care for your clients' </span><span class="highlight" data-i18n="vets.heroTitle2">Livestock</span>
-            </h1>
-            <p class="vet-description" data-i18n="vets.heroDesc">AniTec lets veterinarians follow the animals of the ranchers they add as clients, review clinical history and record visits from their phone.</p>
-            <div class="vet-features">
-              <div class="vet-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="vets.feat1">Clients and patients</span>
-              </div>
-              <div class="vet-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="vets.feat2">Clinical history per animal</span>
-              </div>
-              <div class="vet-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="vets.feat3">Records shared with the rancher</span>
-              </div>
-              <div class="vet-feature">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="vets.feat4">Works with limited signal</span>
-              </div>
-            </div>
-            <div class="vet-buttons">
-              <a href="#benefits" class="btn btn-success">
-                <i class="bi bi-arrow-down"></i>
-                <span data-i18n="vets.viewBenefits">View Benefits</span>
-              </a>
-              <a href="../../index.html#download" class="btn btn-secondary">
-                <i class="bi bi-rocket-takeoff"></i>
-                <span data-i18n="vets.tryFree">Download the App</span>
-              </a>
-            </div>
-          </div>
-          <div class="vet-hero-image">
-            <div class="hero-image-wrapper">
-              <img
-                src="../images/veterinarians/veterinarian/veterinarian-1.png"
-                alt="Veterinarian using AniTec"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <main id="main">
 
-    <section class="benefits-vet" id="benefits">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-gift"></i>
-            <span data-i18n="vets.benefitsSubtitle">Benefits</span>
-          </span>
-          <h2 class="section-title" data-i18n="vets.benefitsTitle">Why AniTec for Veterinarians?</h2>
-          <p class="section-description" data-i18n="vets.benefitsDesc">What the app helps you do in your daily practice.</p>
+      <section class="hero page-hero">
+        <img class="hero-bg" src="../images/photos/vet-calf-phone.webp" alt="" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><i class="bi bi-person-check"></i> <span data-i18n="vets.heroBadge">For Veterinarians</span></p>
+            <h1 class="page-title"><span data-i18n="vets.heroTitle1">Care for your clients' </span><em data-i18n="vets.heroTitle2">Livestock</em></h1>
+            <p class="hero-lead" data-i18n="vets.heroDesc">AniTec lets veterinarians follow the animals of the ranchers they add as clients, review clinical history and record visits from their phone.</p>
+            <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.feat1">Clients and patients</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.feat2">Clinical history per animal</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.feat3">Records shared with the rancher</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.feat4">Works with limited signal</span></li>
+          </ul>
+            <div class="hero-cta">
+              <a href="#benefits" class="pill pill-cream"><span data-i18n="vets.viewBenefits">View Benefits</span> <i class="bi bi-arrow-down-short"></i></a>
+              <a href="../../index.html#download" class="pill pill-ghost" data-i18n="vets.tryFree">Download the App</a>
+            </div>
+          </div>
+          <aside class="hero-side">
+            <div class="phone phone-hero" aria-hidden="true">
+              <img src="../images/app/android-health.png" alt="" width="540" height="1200" />
+            </div>
+          </aside>
         </div>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-file-earmark-medical"></i>
-            </div>
-            <h3 data-i18n="vets.benef1Title">Clinical History</h3>
-            <p data-i18n="vets.benef1Desc">Review the health records of each animal: vaccines, treatments, diagnoses and follow-ups.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-calendar-check"></i>
-            </div>
-            <h3 data-i18n="vets.benef2Title">Visits and Activities</h3>
-            <p data-i18n="vets.benef2Desc">Schedule visits and tasks for your clients.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-chat-dots"></i>
-            </div>
-            <h3 data-i18n="vets.benef3Title">Shared with the Rancher</h3>
-            <p data-i18n="vets.benef3Desc">The records you save are available to the rancher in their own app.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-graph-up"></i>
-            </div>
-            <h3 data-i18n="vets.benef4Title">Health Overview</h3>
-            <p data-i18n="vets.benef4Desc">See charts of records by type and by farm for your clients.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-phone"></i>
-            </div>
-            <h3 data-i18n="vets.benef5Title">Mobile Access</h3>
-            <p data-i18n="vets.benef5Desc">Check animals during field visits, even with limited signal.</p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <i class="bi bi-database"></i>
-            </div>
-            <h3 data-i18n="vets.benef6Title">Clients and Patients</h3>
-            <p data-i18n="vets.benef6Desc">Add ranchers as clients and open their farms and animals.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
+      <section class="section" id="benefits">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="vets.benefitsSubtitle">Benefits</p>
+            <h2 class="h2" data-i18n="vets.benefitsTitle">Why AniTec for Veterinarians?</h2>
+          <p class="lead" data-i18n="vets.benefitsDesc">What the app helps you do in your daily practice.</p>
+          </header>
+          <div class="bento">
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/vet-calf-phone.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                <h3 data-i18n="vets.benef1Title">Clinical History</h3>
+                <p data-i18n="vets.benef1Desc">Review the health records of each animal: vaccines, treatments, diagnoses and follow-ups.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/aerial-farm-landscape.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-calendar-check"></i></span>
+                <h3 data-i18n="vets.benef2Title">Visits and Activities</h3>
+                <p data-i18n="vets.benef2Desc">Schedule visits and tasks for your clients.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/two-farmers-gate.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-chat-dots"></i></span>
+                <h3 data-i18n="vets.benef3Title">Shared with the Rancher</h3>
+                <p data-i18n="vets.benef3Desc">The records you save are available to the rancher in their own app.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/misty-cows.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-graph-up"></i></span>
+                <h3 data-i18n="vets.benef4Title">Health Overview</h3>
+                <p data-i18n="vets.benef4Desc">See charts of records by type and by farm for your clients.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/man-phone-field.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-phone"></i></span>
+                <h3 data-i18n="vets.benef5Title">Mobile Access</h3>
+                <p data-i18n="vets.benef5Desc">Check animals during field visits, even with limited signal.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/holstein-herd-tags.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-database"></i></span>
+                <h3 data-i18n="vets.benef6Title">Clients and Patients</h3>
+                <p data-i18n="vets.benef6Desc">Add ranchers as clients and open their farms and animals.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="functions-vet">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-tools"></i>
-            <span data-i18n="vets.funcSubtitle">Key Features</span>
-          </span>
-          <h2 class="section-title" data-i18n="vets.funcTitle">What You Can Do</h2>
-        </div>
-        <div class="functions-grid">
-          <div class="function-card">
-            <div class="function-icon">
-              <i class="bi bi-search"></i>
-            </div>
-            <h3 data-i18n="vets.func1Title">Patient List</h3>
-            <p data-i18n="vets.func1Desc">See your clients' animals and filter them by client and farm.</p>
-            <div class="function-tags">
-              <span data-i18n="vets.tag1">Client filter</span>
-              <span data-i18n="vets.tag2">Farm filter</span>
-            </div>
-          </div>
-          <div class="function-card">
-            <div class="function-icon">
-              <i class="bi bi-clipboard-plus"></i>
-            </div>
-            <h3 data-i18n="vets.func2Title">Visit Records</h3>
-            <p data-i18n="vets.func2Desc">Record each consultation: type, description, diagnosis and treatment.</p>
-            <div class="function-tags">
-              <span data-i18n="vets.tag3">Visit type</span>
-              <span data-i18n="vets.tag4">Diagnosis</span>
-            </div>
-          </div>
-          <div class="function-card">
-            <div class="function-icon">
-              <i class="bi bi-prescription2"></i>
-            </div>
-            <h3 data-i18n="vets.func3Title">Prescriptions</h3>
-            <p data-i18n="vets.func3Desc">Note the prescription and the follow-up of each health record.</p>
-            <div class="function-tags">
-              <span data-i18n="vets.tag5">Prescription</span>
-              <span data-i18n="vets.tag6">Treatment</span>
-            </div>
-          </div>
-          <div class="function-card">
-            <div class="function-icon">
-              <i class="bi bi-arrow-repeat"></i>
-            </div>
-            <h3 data-i18n="vets.func4Title">Case Follow-up</h3>
-            <p data-i18n="vets.func4Desc">Set the date of the next check and see the pending follow-ups.</p>
-            <div class="function-tags">
-              <span data-i18n="vets.tag7">Follow-up date</span>
-              <span data-i18n="vets.tag8">Pending list</span>
-            </div>
-          </div>
-          <div class="function-card">
-            <div class="function-icon">
-              <i class="bi bi-share"></i>
-            </div>
-            <h3 data-i18n="vets.func5Title">Scan the Ear Tag</h3>
-            <p data-i18n="vets.func5Desc">Find an animal by scanning its tag or typing its code.</p>
-            <div class="function-tags">
-              <span data-i18n="vets.tag9">Camera</span>
-              <span data-i18n="vets.tag10">Manual code</span>
-            </div>
-          </div>
-          <div class="function-card">
-            <div class="function-icon">
-              <i class="bi bi-graph-up"></i>
-            </div>
-            <h3 data-i18n="vets.func6Title">Overview</h3>
-            <p data-i18n="vets.func6Desc">Counters and charts of your clients, patients and records.</p>
-            <div class="function-tags">
-              <span data-i18n="vets.tag11">Charts</span>
-              <span data-i18n="vets.tag12">Counters</span>
-            </div>
+      <section class="section" style="background: var(--espresso-2)">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="vets.funcSubtitle">Key Features</p>
+            <h2 class="h2" data-i18n="vets.funcTitle">What You Can Do</h2>
+          </header>
+          <div class="func-grid">
+            <article class="func-card reveal">
+              <span class="tile-icon"><i class="bi bi-search"></i></span>
+              <h3 data-i18n="vets.func1Title">Patient List</h3>
+              <p data-i18n="vets.func1Desc">See your clients' animals and filter them by client and farm.</p>
+              <div class="chips"><span data-i18n="vets.tag1">Client filter</span><span data-i18n="vets.tag2">Farm filter</span></div>
+            </article>
+            <article class="func-card reveal">
+              <span class="tile-icon"><i class="bi bi-clipboard-plus"></i></span>
+              <h3 data-i18n="vets.func2Title">Visit Records</h3>
+              <p data-i18n="vets.func2Desc">Record each consultation: type, description, diagnosis and treatment.</p>
+              <div class="chips"><span data-i18n="vets.tag3">Visit type</span><span data-i18n="vets.tag4">Diagnosis</span></div>
+            </article>
+            <article class="func-card reveal">
+              <span class="tile-icon"><i class="bi bi-prescription2"></i></span>
+              <h3 data-i18n="vets.func3Title">Prescriptions</h3>
+              <p data-i18n="vets.func3Desc">Note the prescription and the follow-up of each health record.</p>
+              <div class="chips"><span data-i18n="vets.tag5">Prescription</span><span data-i18n="vets.tag6">Treatment</span></div>
+            </article>
+            <article class="func-card reveal">
+              <span class="tile-icon"><i class="bi bi-arrow-repeat"></i></span>
+              <h3 data-i18n="vets.func4Title">Case Follow-up</h3>
+              <p data-i18n="vets.func4Desc">Set the date of the next check and see the pending follow-ups.</p>
+              <div class="chips"><span data-i18n="vets.tag7">Follow-up date</span><span data-i18n="vets.tag8">Pending list</span></div>
+            </article>
+            <article class="func-card reveal">
+              <span class="tile-icon"><i class="bi bi-qr-code-scan"></i></span>
+              <h3 data-i18n="vets.func5Title">Scan the Ear Tag</h3>
+              <p data-i18n="vets.func5Desc">Find an animal by scanning its tag or typing its code.</p>
+              <div class="chips"><span data-i18n="vets.tag9">Camera</span><span data-i18n="vets.tag10">Manual code</span></div>
+            </article>
+            <article class="func-card reveal">
+              <span class="tile-icon"><i class="bi bi-graph-up"></i></span>
+              <h3 data-i18n="vets.func6Title">Overview</h3>
+              <p data-i18n="vets.func6Desc">Counters and charts of your clients, patients and records.</p>
+              <div class="chips"><span data-i18n="vets.tag11">Charts</span><span data-i18n="vets.tag12">Counters</span></div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="use-cases">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-lightbulb"></i>
-            <span data-i18n="vets.caseSubtitle">Use Cases</span>
-          </span>
-          <h2 class="section-title" data-i18n="vets.caseTitle">How can AniTec help you?</h2>
-          <p class="section-description" data-i18n="vets.caseDesc">Everyday situations where the app makes your work easier.</p>
-        </div>
-        <div class="cases-grid">
-          <div class="case-card">
-            <div class="case-image">
-              <img
-                src="../images/veterinarians/usage/usage-1.png"
-                alt="Field Visit"
-              />
-              <div class="case-overlay">
-                <span data-i18n="vets.case1Title">Field Visit</span>
+      <section class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="vets.caseSubtitle">Use Cases</p>
+            <h2 class="h2" data-i18n="vets.caseTitle">How can AniTec help you?</h2>
+          <p class="lead" data-i18n="vets.caseDesc">Everyday situations where the app makes your work easier.</p>
+          </header>
+          <div class="bento">
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/barn-cows.webp')">
+              <div class="tile-body">
+                <span class="step-n">01</span>
+                <h3 data-i18n="vets.case1Title">Field Visit</h3>
+                <p data-i18n="vets.case1Desc">Before arriving at a farm, you review the history of the animals you are going to see.</p>
               </div>
-            </div>
-            <div class="case-content">
-              <span class="case-number">01</span>
-              <h3 data-i18n="vets.case1Title">Field Visit</h3>
-              <p data-i18n="vets.case1Desc">Before arriving at a farm, you review the history of the animals you are going to see.</p>
-            </div>
-          </div>
-          <div class="case-card">
-            <div class="case-image">
-              <img
-                src="../images/veterinarians/usage/usage-2.png"
-                alt="Livestock Emergency"
-              />
-              <div class="case-overlay">
-                <span data-i18n="vets.case2Title">Quick Identification</span>
+            </article>
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/tagged-black-cattle.webp')">
+              <div class="tile-body">
+                <span class="step-n">02</span>
+                <h3 data-i18n="vets.case2Title">Quick Identification</h3>
+                <p data-i18n="vets.case2Desc">You scan the tag of an animal and open its record.</p>
               </div>
-            </div>
-            <div class="case-content">
-              <span class="case-number">02</span>
-              <h3 data-i18n="vets.case2Title">Quick Identification</h3>
-              <p data-i18n="vets.case2Desc">You scan the tag of an animal and open its record.</p>
-            </div>
-          </div>
-          <div class="case-card">
-            <div class="case-image">
-              <img
-                src="../images/veterinarians/usage/usage-3.png"
-                alt="Treatment Follow-up"
-              />
-              <div class="case-overlay">
-                <span data-i18n="vets.case3Title">Recording a Visit</span>
+            </article>
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/tagged-calves.webp')">
+              <div class="tile-body">
+                <span class="step-n">03</span>
+                <h3 data-i18n="vets.case3Title">Recording a Visit</h3>
+                <p data-i18n="vets.case3Desc">You record the diagnosis and the treatment, and the rancher sees them in their app.</p>
               </div>
-            </div>
-            <div class="case-content">
-              <span class="case-number">03</span>
-              <h3 data-i18n="vets.case3Title">Recording a Visit</h3>
-              <p data-i18n="vets.case3Desc">You record the diagnosis and the treatment, and the rancher sees them in their app.</p>
-            </div>
-          </div>
-          <div class="case-card">
-            <div class="case-image">
-              <img
-                src="../images/veterinarians/usage/usage-4.png"
-                alt="Coordination with Colleagues"
-              />
-              <div class="case-overlay">
-                <span data-i18n="vets.case4Title">Follow-up</span>
+            </article>
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/green-pasture-herd.webp')">
+              <div class="tile-body">
+                <span class="step-n">04</span>
+                <h3 data-i18n="vets.case4Title">Follow-up</h3>
+                <p data-i18n="vets.case4Desc">You set the date of the next check and see which follow-ups are pending.</p>
               </div>
-            </div>
-            <div class="case-content">
-              <span class="case-number">04</span>
-              <h3 data-i18n="vets.case4Title">Follow-up</h3>
-              <p data-i18n="vets.case4Desc">You set the date of the next check and see which follow-ups are pending.</p>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="cta">
-      <div class="cta-wrapper">
-        <div class="cta-image">
-          <img
-            src="../images/veterinarians/veterinarian/veterinarian-2.png"
-            alt="Successful Veterinarian with AniTec"
-          />
-          <div class="cta-image-overlay"></div>
-        </div>
-        <div class="cta-content">
-          <div class="cta-badge">
-            <i class="bi bi-stars"></i>
-            <span data-i18n="vets.ctaBadge">Android app</span>
-          </div>
-          <h2 class="cta-title" data-i18n="vets.ctaTitle">Ready to take your practice to your phone?</h2>
-          <p class="cta-description" data-i18n="vets.ctaDesc">Download the app, choose the veterinarian role and add your first client.</p>
-          <div class="cta-features">
-            <div class="cta-feature">
-              <i class="bi bi-check-circle-fill"></i>
-              <span data-i18n="vets.ctaFeat1">Choose your role when you sign up</span>
+      <section class="cta-band">
+        <img src="../images/photos/herd-looking.webp" alt="" loading="lazy" />
+        <div class="wrap">
+          <div class="cta-inner reveal">
+            <p class="eyebrow"><i class="bi bi-stars"></i> <span data-i18n="vets.ctaBadge">Android app</span></p>
+            <h2 class="h2" data-i18n="vets.ctaTitle">Ready to take your practice to your phone?</h2>
+            <p class="lead" data-i18n="vets.ctaDesc">Download the app, choose the veterinarian role and add your first client.</p>
+            <ul class="checks">
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.ctaFeat1">Choose your role when you sign up</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.ctaFeat2">English and Spanish</span></li>
+            <li><i class="bi bi-check2"></i><span data-i18n="vets.ctaFeat3">Works with limited signal</span></li>
+          </ul>
+            <div class="hero-cta">
+              <a href="../../index.html#download" class="pill pill-cream"><span data-i18n="vets.startFree">Download the App</span> <i class="bi bi-arrow-up-right"></i></a>
+              <a href="../../index.html#features" class="pill pill-ghost" data-i18n="vets.seeHow">See the Features</a>
             </div>
-            <div class="cta-feature">
-              <i class="bi bi-check-circle-fill"></i>
-              <span data-i18n="vets.ctaFeat2">English and Spanish</span>
-            </div>
-            <div class="cta-feature">
-              <i class="bi bi-check-circle-fill"></i>
-              <span data-i18n="vets.ctaFeat3">Works with limited signal</span>
-            </div>
-          </div>
-          <div class="cta-buttons">
-            <a href="../../index.html#download" class="btn btn-primary">
-              <i class="bi bi-rocket-takeoff"></i>
-              <span data-i18n="vets.startFree">Download the App</span>
-            </a>
-            <a href="../../index.html#features" class="btn btn-outline-light">
-              <i class="bi bi-play-circle"></i>
-              <span data-i18n="vets.seeHow">See the Features</span>
-            </a>
-          </div>
           <p class="cta-note" data-i18n="vets.ctaNote">Your session is stored encrypted on your device.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-about">
-            <a href="../../index.html" class="logo">
-              <img src="../../assets/images/logo.png" alt="AniTec Logo" />
-              <span class="logo-text">AniTec</span>
-            </a>
-            <p class="footer-description" data-i18n="footer.desc">AniTec is a livestock management app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal.</p>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.product">Product</h4>
-            <ul class="footer-links">
-              <li><a href="../../index.html#features" data-i18n="footer.features">Features</a></li>
-              <li><a href="../../index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
-              <li><a href="../../index.html#download" data-i18n="footer.download">Download</a></li>
-              <li><a href="ranchers.html" data-i18n="footer.forRanchers">For Ranchers</a></li>
-              <li><a href="veterinarians.html" data-i18n="footer.forVets">For Veterinarians</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.project">The Project</h4>
-            <ul class="footer-links">
-              <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
-              <li><a href="https://github.com/ADM-1ACC0238-2620-13975-Grupo01" target="_blank" rel="noreferrer" data-i18n="footer.github">Source code</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.legal">Legal</h4>
-            <ul class="footer-links">
-              <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
-            </ul>
-          </div>
+    <footer class="footer" id="contact">
+      <div class="wrap footer-grid">
+        <div class="footer-about">
+          <a href="../../index.html" class="nav-logo">
+            <img src="../images/logo.png" alt="" width="34" height="34" />
+            <span>AniTec</span>
+          </a>
+          <p data-i18n="footer.desc">AniTec is a livestock management app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal.</p>
         </div>
-        <div class="footer-bottom">
-          <p class="footer-copyright" data-i18n="footer.copyright">© 2026 AniTec. All rights reserved.</p>
-          <div class="footer-legal">
-            <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
-          </div>
+        <div>
+          <h4 data-i18n="footer.product">Product</h4>
+          <ul>
+            <li><a href="../../index.html#features" data-i18n="footer.features">Features</a></li>
+            <li><a href="../../index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
+            <li><a href="../../index.html#download" data-i18n="footer.download">Download</a></li>
+            <li><a href="ranchers.html" data-i18n="footer.forRanchers">For Ranchers</a></li>
+            <li><a href="veterinarians.html" data-i18n="footer.forVets">For Veterinarians</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.project">The Project</h4>
+          <ul>
+            <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="https://github.com/ADM-1ACC0238-2620-13975-Grupo01" target="_blank" rel="noreferrer" data-i18n="footer.github">Source code</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <ul>
+            <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          </ul>
         </div>
       </div>
+      <div class="wrap footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 AniTec. All rights reserved.</p>
+        <p><a href="https://unsplash.com/license" target="_blank" rel="noreferrer" data-i18n="v2.photos">Photos: Unsplash contributors</a></p>
+      </div>
+      <div class="wordmark" aria-hidden="true">AniTec</div>
     </footer>
 
     <script src="../scripts/i18n.js"></script>
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/home-i18n.js"></script>
+    <script src="../scripts/home.js"></script>
   </body>
 </html>

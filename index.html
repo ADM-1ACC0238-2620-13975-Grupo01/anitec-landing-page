@@ -9,513 +9,534 @@
     <meta name="author" content="AniTec" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="AniTec - Livestock Management App for Ranchers and Veterinarians" />
     <meta property="og:description" content="AniTec is a mobile app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal." />
     <meta property="og:site_name" content="AniTec" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="AniTec - Livestock Management App for Ranchers and Veterinarians" />
     <meta property="twitter:description" content="AniTec is a mobile app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal." />
-    
+
     <!-- Favicons -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
     <link rel="icon" href="./assets/images/logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="./assets/images/logo.png" />
-    
+
     <!-- Theme Color -->
-    <meta name="theme-color" content="#79B267" />
-    <meta name="msapplication-TileColor" content="#79B267" />
-    
-    <!-- Fonts Preconnect -->
+    <meta name="theme-color" content="#1d130e" />
+    <meta name="msapplication-TileColor" content="#1d130e" />
+
+    <!-- The page starts hidden behind the intro only when scripts run -->
+    <script>document.documentElement.classList.add("js");</script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="preload" as="image" href="assets/images/photos/hero-sunset-cow.webp" fetchpriority="high" />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/home.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="assets/images/logo.png" alt="AniTec Logo" />
-          <span class="logo-text">AniTec</span>
-        </a>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
-          <li><a href="assets/pages/about.html" data-i18n="nav.about">About Us</a></li>
-          <li><a href="assets/pages/ranchers.html" data-i18n="nav.ranchers">Ranchers</a></li>
-          <li><a href="assets/pages/veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a></li>
-          <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
-        </ul>
-        <div class="nav-actions">
-          <div class="lang-switcher">
-            <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
-            <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
-          </div>
-            <a href="#download" class="btn btn-success btn-sm" data-i18n="nav.startFree">Download</a>
-          <button class="mobile-menu-btn">
-            <i class="bi bi-list"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
+    <a class="skip-link" href="#main" data-i18n="v2.skip">Skip to content</a>
 
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu">
-      <div class="mobile-menu-header">
-        <span
-          style="
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--primary-brown);
-          "
-          data-i18n="nav.menu">Menu</span
-        >
-        <button class="mobile-menu-close">
-          <i class="bi bi-x-lg"></i>
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <img src="assets/images/logo.png" alt="" width="72" height="72" />
+      <span class="preloader-word">AniTec</span>
+    </div>
+
+    <!-- ------------------------------------------------------------ Navigation -->
+    <header class="nav" id="nav">
+      <a href="index.html" class="nav-logo" aria-label="AniTec">
+        <img src="assets/images/logo.png" alt="" width="34" height="34" />
+        <span>AniTec</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="assets/pages/about.html" data-i18n="nav.about">About Us</a>
+        <a href="assets/pages/ranchers.html" data-i18n="nav.ranchers">Ranchers</a>
+        <a href="assets/pages/veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
+        </div>
+        <a href="#download" class="pill pill-light pill-sm" data-i18n="nav.startFree">Download</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
         </button>
       </div>
-      <ul class="mobile-menu-links">
-        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="assets/pages/about.html" data-i18n="nav.about">About Us</a></li>
-        <li><a href="assets/pages/ranchers.html" data-i18n="nav.ranchers">Ranchers</a></li>
-        <li><a href="assets/pages/veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a></li>
-        <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
-      </ul>
-      <div class="mobile-menu-cta">
-        <a href="#download" class="btn btn-success" data-i18n="nav.startFree">Download</a>
-      </div>
-      <div class="mobile-lang-switcher">
-        <button class="lang-btn" id="mobile-lang-en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn" id="mobile-lang-es" onclick="setLanguage('es')">ES</button>
+    </header>
+
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu-links" aria-label="Mobile">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="assets/pages/about.html" data-i18n="nav.about">About Us</a>
+        <a href="assets/pages/ranchers.html" data-i18n="nav.ranchers">Ranchers</a>
+        <a href="assets/pages/veterinarians.html" data-i18n="nav.veterinarians">Veterinarians</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      </nav>
+      <div class="menu-foot">
+        <a href="#download" class="pill pill-light" data-i18n="nav.startFree">Download</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang-btn" id="mobile-lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" id="mobile-lang-es" onclick="setLanguage('es')">ES</button>
+        </div>
       </div>
     </div>
 
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <div class="hero-badge">
-              <i class="bi bi-phone"></i>
-              <span data-i18n="hero.badge">Android app · English and Spanish</span>
-            </div>
-            <h1 class="hero-title">
-              <span data-i18n="hero.title1">Manage your </span><span data-i18n="hero.title2" class="highlight">Livestock</span><span data-i18n="hero.title3"> from your Phone</span>
-            </h1>
-            <p class="hero-description" data-i18n="hero.description">AniTec is a mobile app for ranchers and veterinarians. Register your farms and animals, keep health records, schedule activities and keep working even with limited signal.</p>
-            <div class="hero-buttons">
-              <a href="#download" class="btn btn-success">
-                <i class="bi bi-download"></i>
+    <main id="main">
+      <!-- ------------------------------------------------------------ Hero -->
+      <section class="hero" id="top">
+        <img class="hero-bg" src="assets/images/photos/hero-sunset-cow.webp" alt="" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><i class="bi bi-phone"></i> <span data-i18n="hero.badge">Android app · English and Spanish</span></p>
+            <h1 class="hero-title" data-i18n="v2.heroTitle" data-i18n-html>Every animal,<br /><em>accounted for.</em></h1>
+            <p class="hero-lead" data-i18n="hero.description">AniTec is a mobile app for ranchers and veterinarians. Register your farms and animals, keep health records, schedule activities and keep working even with limited signal.</p>
+            <div class="hero-cta">
+              <a href="#download" class="pill pill-cream">
                 <span data-i18n="hero.download">Download the App</span>
+                <i class="bi bi-arrow-down-short"></i>
               </a>
-              <a href="#features" class="btn btn-secondary">
-                <i class="bi bi-play-circle"></i>
-                <span data-i18n="hero.learnMore">Learn More</span>
+              <a href="#features" class="pill pill-ghost" data-i18n="hero.learnMore">Learn More</a>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <div class="phone phone-hero" aria-hidden="true">
+              <img src="assets/images/app/android-home.png" alt="" width="540" height="1200" />
+            </div>
+            <a href="assets/pages/ranchers.html" class="glass role-card">
+              <span class="role-icon"><i class="bi bi-tree"></i></span>
+              <span class="role-text">
+                <strong data-i18n="v2.roleRancher">I'm a rancher</strong>
+                <small data-i18n="v2.roleRancherDesc">Farms, animals, health and finances</small>
+              </span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="assets/pages/veterinarians.html" class="glass role-card">
+              <span class="role-icon"><i class="bi bi-heart-pulse"></i></span>
+              <span class="role-text">
+                <strong data-i18n="v2.roleVet">I'm a veterinarian</strong>
+                <small data-i18n="v2.roleVetDesc">Clients, patients and clinical history</small>
+              </span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </aside>
+        </div>
+
+        <ol class="chapters">
+          <li>
+            <a href="#features">
+              <img src="assets/images/photos/tagged-calves.webp" alt="" loading="lazy" />
+              <span class="chapter-num">01</span>
+              <span class="chapter-title" data-i18n="v2.chapter1">Register your herd</span>
+            </a>
+          </li>
+          <li>
+            <a href="#app">
+              <img src="assets/images/photos/vet-calf-phone.webp" alt="" loading="lazy" />
+              <span class="chapter-num">02</span>
+              <span class="chapter-title" data-i18n="v2.chapter2">Care with follow-up</span>
+            </a>
+          </li>
+          <li>
+            <a href="#offline">
+              <img src="assets/images/photos/green-pasture-herd.webp" alt="" loading="lazy" />
+              <span class="chapter-num">03</span>
+              <span class="chapter-title" data-i18n="v2.chapter3">Keep working offline</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ------------------------------------------------------------ Manifesto -->
+      <section class="manifesto" id="offline">
+        <img class="manifesto-bg" src="assets/images/photos/brown-cow-closeup.webp" alt="" loading="lazy" />
+        <div class="manifesto-shade"></div>
+        <div class="manifesto-inner">
+          <h2 class="manifesto-title">
+            <span class="reveal-line" data-i18n="v2.manifestoLine1">Every animal, a record.</span>
+            <span class="reveal-line accent" data-i18n="v2.manifestoLine2">Every record, on time.</span>
+          </h2>
+          <p class="manifesto-text reveal" data-i18n="v2.manifestoText">From the first ear tag to the last visit, AniTec keeps the story of your herd in your pocket.</p>
+          <a href="#app" class="pill pill-cream reveal">
+            <span data-i18n="gallery.title">See AniTec in Action</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------ Roles -->
+      <section class="section roles" id="segments">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="segments.subtitle">Two Roles, One App</p>
+            <h2 class="h2" data-i18n="segments.title">Designed for Ranchers and Veterinarians</h2>
+            <p class="lead" data-i18n="segments.description">Each role gets its own experience and sees only its own information.</p>
+          </header>
+          <div class="roles-grid">
+            <article class="role-block role-green reveal">
+              <div class="role-photo">
+                <img src="assets/images/photos/rancher-feeding-calf.webp" alt="A rancher feeding a calf in a barn" loading="lazy" />
+                <div class="phone phone-sm tilt-right" aria-hidden="true">
+                  <img src="assets/images/app/android-farms.png" alt="" loading="lazy" width="540" height="1200" />
+                </div>
+              </div>
+              <div class="role-body">
+                <h3 data-i18n="segments.ranchersTitle">Ranchers</h3>
+                <p data-i18n="segments.ranchersDesc">Small and medium producers who need to register farms, corrals and animals and keep track of health, activities and finances.</p>
+                <a href="assets/pages/ranchers.html" class="pill pill-dark"><span data-i18n="segments.viewBenefits">View Benefits</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+            <article class="role-block role-brown reveal">
+              <div class="role-photo">
+                <img src="assets/images/photos/vet-calf-phone.webp" alt="A veterinarian examining a calf while holding a phone" loading="lazy" />
+                <div class="phone phone-sm tilt-right" aria-hidden="true">
+                  <img src="assets/images/app/android-health.png" alt="" loading="lazy" width="540" height="1200" />
+                </div>
+              </div>
+              <div class="role-body">
+                <h3 data-i18n="segments.vetsTitle">Veterinarians</h3>
+                <p data-i18n="segments.vetsDesc">Animal health professionals who follow their clients' animals, review clinical history and record visits.</p>
+                <a href="assets/pages/veterinarians.html" class="pill pill-cream"><span data-i18n="segments.viewBenefits">View Benefits</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------ Features (bento) -->
+      <section class="section features" id="features">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="features.subtitle">Key Features</p>
+            <h2 class="h2" data-i18n="features.title">What you can do with AniTec</h2>
+            <p class="lead" data-i18n="features.description">Everything you need to run your livestock from your phone.</p>
+          </header>
+
+          <div class="bento">
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/barn-cows.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-diagram-3"></i></span>
+                <h3 data-i18n="features.animalsTitle">Farms and Animals</h3>
+                <p data-i18n="features.animalsDesc">Organize your animals by farm and corral. Register them one by one or in batches of up to 500, add a photo and open a complete record.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/tagged-calves.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-heart-pulse"></i></span>
+                <h3 data-i18n="features.healthTitle">Health Records</h3>
+                <p data-i18n="features.healthDesc">Record incidents, vaccines, treatments and diagnoses, with a follow-up date so nothing is forgotten.</p>
+              </div>
+            </article>
+
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/tagged-black-cattle.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-qr-code-scan"></i></span>
+                <h3 data-i18n="metrics.label2">Scan the ear tag</h3>
+                <p data-i18n="metrics.desc2">Identify an animal by scanning its code with the camera, or type the code if you prefer.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal accent-green" style="--img: url('../images/photos/offline-misty-pasture.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-wifi-off"></i></span>
+                <h3 data-i18n="metrics.label1">Works with limited signal</h3>
+                <p data-i18n="metrics.desc1">Animals, health records and activities you create without a connection are saved on your phone and sent when it reconnects.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/vet-rancher-truck.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-shield-lock"></i></span>
+                <h3 data-i18n="v2.consentTitle">You decide who sees your data</h3>
+                <p data-i18n="v2.consentDesc">A veterinarian asks for access and you accept, reject or revoke it at any time. Only accepted veterinarians see your animals.</p>
+              </div>
+            </article>
+
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/farmer-phone-sunset.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-bell"></i></span>
+                <h3 data-i18n="v2.remindersTitle">Reminders for every activity</h3>
+                <p data-i18n="v2.remindersDesc">Get a notification at 8:00 on the day an activity is due. Mark it attended or reschedule it from its card.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal" style="--img: url('../images/photos/barn-phone-check.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-arrow-repeat"></i></span>
+                <h3 data-i18n="v2.syncTitle">Sync without duplicates</h3>
+                <p data-i18n="v2.syncDesc">Changes made offline are sent only once, even if the connection drops halfway. If a record changed elsewhere, you choose which version to keep.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-2 reveal accent-brown" style="--img: url('../images/photos/two-farmers-gate.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-cash-stack"></i></span>
+                <h3 data-i18n="features.financeTitle">Finances</h3>
+                <p data-i18n="features.financeDesc">Record income and expenses in soles and see your balance at any time.</p>
+              </div>
+            </article>
+
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/aerial-herd.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-graph-up"></i></span>
+                <h3 data-i18n="features.analyticsTitle">Analytics and Sensors</h3>
+                <p data-i18n="features.analyticsDesc">See charts of your herd's health and records, and the latest readings from your IoT devices.</p>
+              </div>
+            </article>
+            <article class="tile tile-photo span-3 reveal" style="--img: url('../images/photos/older-farmer-phone.webp')">
+              <div class="tile-body">
+                <span class="tile-icon"><i class="bi bi-universal-access"></i></span>
+                <h3 data-i18n="v2.accessTitle">Readable for everyone</h3>
+                <p data-i18n="v2.accessDesc">High-contrast colors, buttons that screen readers can name and text that scales up to 200%.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------ Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span data-i18n="v2.marquee1">Works offline</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee2">Scan the ear tag</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee3">English and Spanish</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee4">Reminders</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee5">You control access</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee1">Works offline</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee2">Scan the ear tag</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee3">English and Spanish</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee4">Reminders</span><i class="bi bi-asterisk"></i>
+          <span data-i18n="v2.marquee5">You control access</span><i class="bi bi-asterisk"></i>
+        </div>
+      </div>
+
+      <!-- ------------------------------------------------------------ Pinned app showcase -->
+      <section class="section showcase" id="app">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow" data-i18n="gallery.subtitle">The App</p>
+            <h2 class="h2" data-i18n="gallery.title">See AniTec in Action</h2>
+            <p class="lead" data-i18n="gallery.description">Screens of the Android app.</p>
+          </header>
+          <div class="showcase-grid">
+            <div class="showcase-stage">
+              <div class="phone phone-lg" aria-hidden="true">
+                <img class="shot active" data-step="0" src="assets/images/app/android-home.png" alt="" width="540" height="1200" />
+                <img class="shot" data-step="1" src="assets/images/app/android-farms.png" alt="" loading="lazy" width="540" height="1200" />
+                <img class="shot" data-step="2" src="assets/images/app/android-health.png" alt="" loading="lazy" width="540" height="1200" />
+                <img class="shot" data-step="3" src="assets/images/app/android-activities.png" alt="" loading="lazy" width="540" height="1200" />
+                <img class="shot" data-step="4" src="assets/images/app/android-finance.png" alt="" loading="lazy" width="540" height="1200" />
+                <img class="shot" data-step="5" src="assets/images/app/android-analytics.png" alt="" loading="lazy" width="540" height="1200" />
+              </div>
+            </div>
+            <ol class="showcase-steps">
+              <li class="step active" data-step="0">
+                <span class="step-n">01</span>
+                <h3 data-i18n="gallery.home">Home</h3>
+                <p data-i18n="v2.showcaseHomeDesc">A summary of your herd the moment you open the app.</p>
+              </li>
+              <li class="step" data-step="1">
+                <span class="step-n">02</span>
+                <h3 data-i18n="features.animalsTitle">Farms and Animals</h3>
+                <p data-i18n="features.animalsDesc">Organize your animals by farm and corral.</p>
+              </li>
+              <li class="step" data-step="2">
+                <span class="step-n">03</span>
+                <h3 data-i18n="features.healthTitle">Health Records</h3>
+                <p data-i18n="features.healthDesc">Record incidents, vaccines, treatments and diagnoses.</p>
+              </li>
+              <li class="step" data-step="3">
+                <span class="step-n">04</span>
+                <h3 data-i18n="features.activitiesTitle">Activities</h3>
+                <p data-i18n="features.activitiesDesc">Schedule farm tasks and see the upcoming ones first.</p>
+              </li>
+              <li class="step" data-step="4">
+                <span class="step-n">05</span>
+                <h3 data-i18n="features.financeTitle">Finances</h3>
+                <p data-i18n="features.financeDesc">Record income and expenses in soles.</p>
+              </li>
+              <li class="step" data-step="5">
+                <span class="step-n">06</span>
+                <h3 data-i18n="features.analyticsTitle">Analytics and Sensors</h3>
+                <p data-i18n="features.analyticsDesc">See charts of your herd's health and records.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------ How it works -->
+      <section class="section how" id="how-it-works">
+        <div class="wrap">
+          <div class="how-head">
+            <header class="section-head reveal">
+              <p class="eyebrow" data-i18n="howItWorks.subtitle">Get Started</p>
+              <h2 class="h2" data-i18n="howItWorks.title">Get started in four steps</h2>
+              <p class="lead" data-i18n="howItWorks.description">No special knowledge needed: choose your role and start registering.</p>
+            </header>
+            <img class="how-photo reveal" src="assets/images/photos/white-zebu.webp" alt="A white zebu looking at the camera on a ranch" loading="lazy" />
+          </div>
+          <ol class="how-steps">
+            <li class="reveal">
+              <span class="big-n">01</span>
+              <h3 data-i18n="howItWorks.step1Title">Download the App</h3>
+              <p data-i18n="howItWorks.step1Desc">Install the Android app from the download section.</p>
+            </li>
+            <li class="reveal">
+              <span class="big-n">02</span>
+              <h3 data-i18n="howItWorks.step2Title">Create Your Account</h3>
+              <p data-i18n="howItWorks.step2Desc">Choose whether you are a rancher or a veterinarian and accept the Terms of Service.</p>
+            </li>
+            <li class="reveal">
+              <span class="big-n">03</span>
+              <h3 data-i18n="howItWorks.step3Title">Register Your Livestock</h3>
+              <p data-i18n="howItWorks.step3Desc">Add your farms, corrals and animals.</p>
+            </li>
+            <li class="reveal">
+              <span class="big-n">04</span>
+              <h3 data-i18n="howItWorks.step4Title">Keep Everything Up to Date</h3>
+              <p data-i18n="howItWorks.step4Desc">Record health events, activities and finances from your phone.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------ Download -->
+      <section class="section download" id="download">
+        <img class="download-bg" src="assets/images/photos/pasture-silhouette.webp" alt="" loading="lazy" />
+        <div class="download-shade"></div>
+        <div class="wrap download-inner">
+          <header class="section-head center reveal">
+            <p class="eyebrow" data-i18n="download.subtitle">Download</p>
+            <h2 class="h2" data-i18n="download.title">Get the AniTec App</h2>
+            <p class="lead" data-i18n="download.description">AniTec is available for Android. A cross-platform version for Android and iOS is on its way.</p>
+          </header>
+          <div class="download-grid">
+            <div class="glass dl-card reveal">
+              <span class="dl-icon"><i class="bi bi-android2"></i></span>
+              <h3 data-i18n="download.androidTitle">Android</h3>
+              <p data-i18n="download.androidDesc">Distributed to testers through Firebase App Distribution. Request access from the team to install it.</p>
+              <a href="https://appdistribution.firebase.dev/i/417dc4e6d8ae3e32" class="pill pill-cream" target="_blank" rel="noreferrer">
+                <span data-i18n="download.androidButton">Get the Android App</span>
+                <i class="bi bi-arrow-up-right"></i>
               </a>
             </div>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-number" data-i18n="hero.stat1n">2</div>
-                <div class="stat-label" data-i18n="hero.stat1">User roles</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number" data-i18n="hero.stat2n">2</div>
-                <div class="stat-label" data-i18n="hero.stat2">Languages</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number" data-i18n="hero.stat3n">Offline</div>
-                <div class="stat-label" data-i18n="hero.stat3">Saves your work</div>
-              </div>
-            </div>
-          </div>
-          <div class="hero-image-wrapper">
-            <img src="assets/images/app/android-home.png" alt="Home screen of the AniTec app" class="phone-shot" />
-            <div class="hero-floating-card hero-floating-card-1">
-              <div class="floating-icon green">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="floating-text">
-                <h4 data-i18n="hero.statsAd1">Animal registered</h4>
-                <p data-i18n="hero.statsAd2">Saved on your phone</p>
-              </div>
-            </div>
-            <div class="hero-floating-card hero-floating-card-2">
-              <div class="floating-icon brown">
-                <i class="bi bi-heart-pulse"></i>
-              </div>
-              <div class="floating-text">
-                <h4 data-i18n="hero.statsAd3">Health record</h4>
-                <p data-i18n="hero.statsAd4">Synced when online</p>
-              </div>
+            <div class="glass dl-card dl-soon reveal">
+              <span class="dl-icon"><i class="bi bi-apple"></i></span>
+              <h3 data-i18n="download.flutterTitle">iOS and Flutter</h3>
+              <p data-i18n="download.flutterDesc">We are building a Flutter version that will run on Android and iOS.</p>
+              <span class="pill pill-ghost disabled" aria-disabled="true" data-i18n="download.flutterButton">Coming soon</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="segments" id="segments">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-people"></i>
-            <span data-i18n="segments.subtitle">Two Roles, One App</span>
-          </span>
-          <h2 class="section-title" data-i18n="segments.title">Designed for Ranchers and Veterinarians</h2>
-          <p class="section-description" data-i18n="segments.description">Each role gets its own experience and sees only its own information.</p>
-        </div>
-        <div class="segments-grid">
-          <div class="segment-card">
-            <div class="segment-image">
-              <img src="assets/images/home/rancher.png" alt="Rancher" />
-            </div>
-            <h3 class="segment-title" data-i18n="segments.ranchersTitle">Ranchers</h3>
-            <p class="segment-description" data-i18n="segments.ranchersDesc">Small and medium producers who need to register farms, corrals and animals and keep track of health, activities and finances.</p>
-            <a href="assets/pages/ranchers.html" class="btn btn-secondary">
-              <span data-i18n="segments.viewBenefits">View Benefits</span> <i class="bi bi-arrow-right"></i>
-            </a>
+      <!-- ------------------------------------------------------------ Pricing -->
+      <section class="section pricing" id="pricing">
+        <div class="wrap">
+          <header class="section-head center reveal">
+            <p class="eyebrow" data-i18n="pricing.subtitle">Plans</p>
+            <h2 class="h2" data-i18n="pricing.title">Plans for every role</h2>
+            <p class="lead" data-i18n="pricing.description">Monthly plans in Peruvian soles. Subscription payments inside the app are coming soon.</p>
+          </header>
+          <div class="pricing-grid">
+            <article class="plan reveal">
+              <h3 data-i18n="pricing.basic">Rancher Basic</h3>
+              <p class="plan-desc" data-i18n="pricing.basicDesc">To start digitizing a small herd</p>
+              <p class="plan-price"><span class="cur">S/</span><span class="amt">49</span><span class="per" data-i18n="pricing.period">/month</span></p>
+              <p class="plan-note" data-i18n="pricing.billed">Billed monthly</p>
+              <ul>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.upTo80" data-i18n-html>Up to <strong>80 animals</strong></span></li>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.allFeatures">All app features</span></li>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.languages">English and Spanish</span></li>
+              </ul>
+              <a href="#download" class="pill pill-ghost" data-i18n="pricing.button">Get the App</a>
+            </article>
+            <article class="plan plan-featured reveal">
+              <span class="plan-badge"><i class="bi bi-star-fill"></i> <span data-i18n="pricing.mostPopular">Most Popular</span></span>
+              <h3 data-i18n="pricing.pro">Rancher Pro</h3>
+              <p class="plan-desc" data-i18n="pricing.proDesc">For larger herds</p>
+              <p class="plan-price"><span class="cur">S/</span><span class="amt">99</span><span class="per" data-i18n="pricing.period">/month</span></p>
+              <p class="plan-note" data-i18n="pricing.billed">Billed monthly</p>
+              <ul>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.upTo250" data-i18n-html>Up to <strong>250 animals</strong></span></li>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.allFeatures">All app features</span></li>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.languages">English and Spanish</span></li>
+              </ul>
+              <a href="#download" class="pill pill-dark" data-i18n="pricing.button">Get the App</a>
+            </article>
+            <article class="plan reveal">
+              <h3 data-i18n="pricing.vet">Veterinarian Professional</h3>
+              <p class="plan-desc" data-i18n="pricing.vetDesc">For professionals who follow several clients</p>
+              <p class="plan-price"><span class="cur">S/</span><span class="amt">129</span><span class="per" data-i18n="pricing.period">/month</span></p>
+              <p class="plan-note" data-i18n="pricing.billed">Billed monthly</p>
+              <ul>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.upTo1000" data-i18n-html>Up to <strong>1,000 animals</strong></span></li>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.clients">Clients and patients</span></li>
+                <li><i class="bi bi-check2"></i><span data-i18n="pricing.allFeatures">All app features</span></li>
+              </ul>
+              <a href="#download" class="pill pill-ghost" data-i18n="pricing.button">Get the App</a>
+            </article>
           </div>
-          <div class="segment-card">
-            <div class="segment-image">
-              <img src="assets/images/home/veterinarian.png" alt="Veterinarian" />
-            </div>
-            <h3 class="segment-title" data-i18n="segments.vetsTitle">Veterinarians</h3>
-            <p class="segment-description" data-i18n="segments.vetsDesc">Animal health professionals who follow their clients' animals, review clinical history and record visits.</p>
-            <a href="assets/pages/veterinarians.html" class="btn btn-secondary">
-              <span data-i18n="segments.viewBenefits">View Benefits</span> <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
+          <p class="pricing-note"><i class="bi bi-credit-card"></i> <span data-i18n="pricing.note">Payments are processed by Stripe and currently run in test mode.</span></p>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="metrics" id="metrics">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-tree"></i>
-            <span data-i18n="metrics.subtitle">Built for the Field</span>
-          </span>
-          <h2 class="section-title" data-i18n="metrics.title">Made for work in the field</h2>
-          <p class="section-description" data-i18n="metrics.description">AniTec is designed for places where the signal comes and goes.</p>
+    <!-- ------------------------------------------------------------ Footer -->
+    <footer class="footer" id="contact">
+      <div class="wrap footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.png" alt="" width="34" height="34" />
+            <span>AniTec</span>
+          </a>
+          <p data-i18n="footer.desc">AniTec is a livestock management app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal.</p>
         </div>
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <div class="metric-icon"><i class="bi bi-wifi-off"></i></div>
-            <div class="metric-number text" data-i18n="metrics.num1">Offline</div>
-            <div class="metric-label" data-i18n="metrics.label1">Works with limited signal</div>
-            <p class="metric-description" data-i18n="metrics.desc1">Animals, health records and activities you create without a connection are saved on your phone and sent when it reconnects.</p>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon"><i class="bi bi-qr-code-scan"></i></div>
-            <div class="metric-number text" data-i18n="metrics.num2">QR</div>
-            <div class="metric-label" data-i18n="metrics.label2">Scan the ear tag</div>
-            <p class="metric-description" data-i18n="metrics.desc2">Identify an animal by scanning its code with the camera, or type the code if you prefer.</p>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon"><i class="bi bi-translate"></i></div>
-            <div class="metric-number text" data-i18n="metrics.num3">EN · ES</div>
-            <div class="metric-label" data-i18n="metrics.label3">Two languages</div>
-            <p class="metric-description" data-i18n="metrics.desc3">Switch between English and Spanish from inside the app.</p>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon"><i class="bi bi-shield-check"></i></div>
-            <div class="metric-number text" data-i18n="metrics.num4">2</div>
-            <div class="metric-label" data-i18n="metrics.label4">Two roles</div>
-            <p class="metric-description" data-i18n="metrics.desc4">Ranchers and veterinarians each see only the farms, animals and records that belong to them.</p>
-          </div>
+        <div>
+          <h4 data-i18n="footer.product">Product</h4>
+          <ul>
+            <li><a href="#features" data-i18n="footer.features">Features</a></li>
+            <li><a href="#pricing" data-i18n="footer.pricing">Pricing</a></li>
+            <li><a href="#download" data-i18n="footer.download">Download</a></li>
+            <li><a href="assets/pages/ranchers.html" data-i18n="footer.forRanchers">For Ranchers</a></li>
+            <li><a href="assets/pages/veterinarians.html" data-i18n="footer.forVets">For Veterinarians</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.project">The Project</h4>
+          <ul>
+            <li><a href="assets/pages/about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="https://github.com/ADM-1ACC0238-2620-13975-Grupo01" target="_blank" rel="noreferrer" data-i18n="footer.github">Source code</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <ul>
+            <li><a href="assets/pages/terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <section class="features" id="features">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-stars"></i>
-            <span data-i18n="features.subtitle">Key Features</span>
-          </span>
-          <h2 class="section-title" data-i18n="features.title">What you can do with AniTec</h2>
-          <p class="section-description" data-i18n="features.description">Everything you need to run your livestock from your phone.</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-diagram-3"></i></div>
-            <h3 class="feature-title" data-i18n="features.animalsTitle">Farms and Animals</h3>
-            <p class="feature-description" data-i18n="features.animalsDesc">Organize your animals by farm and corral. Register them one by one or in batches of up to 500, add a photo and open a complete record.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-heart-pulse"></i></div>
-            <h3 class="feature-title" data-i18n="features.healthTitle">Health Records</h3>
-            <p class="feature-description" data-i18n="features.healthDesc">Record incidents, vaccines, treatments and diagnoses, with a follow-up date so nothing is forgotten.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-calendar-check"></i></div>
-            <h3 class="feature-title" data-i18n="features.activitiesTitle">Activities</h3>
-            <p class="feature-description" data-i18n="features.activitiesDesc">Schedule farm tasks and see the upcoming ones first and the overdue ones highlighted.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-cash-stack"></i></div>
-            <h3 class="feature-title" data-i18n="features.financeTitle">Finances</h3>
-            <p class="feature-description" data-i18n="features.financeDesc">Record income and expenses in soles and see your balance at any time.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-people"></i></div>
-            <h3 class="feature-title" data-i18n="features.vetTitle">Veterinary Collaboration</h3>
-            <p class="feature-description" data-i18n="features.vetDesc">Veterinarians add ranchers as clients and review their animals and clinical history.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-graph-up"></i></div>
-            <h3 class="feature-title" data-i18n="features.analyticsTitle">Analytics and Sensors</h3>
-            <p class="feature-description" data-i18n="features.analyticsDesc">See charts of your herd's health and records, and the latest readings from your IoT devices.</p>
-          </div>
-        </div>
+      <div class="wrap footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 AniTec. All rights reserved.</p>
+        <p><a href="https://unsplash.com/license" target="_blank" rel="noreferrer" data-i18n="v2.photos">Photos: Unsplash contributors</a></p>
       </div>
-    </section>
-
-    <section class="app-gallery-section" id="app">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-images"></i>
-            <span data-i18n="gallery.subtitle">The App</span>
-          </span>
-          <h2 class="section-title" data-i18n="gallery.title">See AniTec in Action</h2>
-          <p class="section-description" data-i18n="gallery.description">Screens of the Android app.</p>
-        </div>
-        <div class="app-gallery">
-          <figure class="phone-card"><img src="assets/images/app/android-home.png" alt="Home" loading="lazy" /><figcaption data-i18n="gallery.home">Home</figcaption></figure>
-          <figure class="phone-card"><img src="assets/images/app/android-farms.png" alt="Farms" loading="lazy" /><figcaption data-i18n="gallery.farms">Farms</figcaption></figure>
-          <figure class="phone-card"><img src="assets/images/app/android-health.png" alt="Health records" loading="lazy" /><figcaption data-i18n="gallery.health">Health records</figcaption></figure>
-          <figure class="phone-card"><img src="assets/images/app/android-activities.png" alt="Activities" loading="lazy" /><figcaption data-i18n="gallery.activities">Activities</figcaption></figure>
-          <figure class="phone-card"><img src="assets/images/app/android-finance.png" alt="Finances" loading="lazy" /><figcaption data-i18n="gallery.finance">Finances</figcaption></figure>
-          <figure class="phone-card"><img src="assets/images/app/android-analytics.png" alt="Analytics" loading="lazy" /><figcaption data-i18n="gallery.analytics">Analytics</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="how-it-works" id="how-it-works">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-rocket-takeoff"></i>
-            <span data-i18n="howItWorks.subtitle">Get Started</span>
-          </span>
-          <h2 class="section-title" data-i18n="howItWorks.title">Get started in four steps</h2>
-          <p class="section-description" data-i18n="howItWorks.description">No special knowledge needed: choose your role and start registering.</p>
-        </div>
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <div class="step-content">
-              <div class="step-icon"><i class="bi bi-download"></i></div>
-              <h3 class="step-title" data-i18n="howItWorks.step1Title">Download the App</h3>
-              <p class="step-description" data-i18n="howItWorks.step1Desc">Install the Android app from the download section.</p>
-            </div>
-            <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
-          </div>
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <div class="step-content">
-              <div class="step-icon"><i class="bi bi-person-add"></i></div>
-              <h3 class="step-title" data-i18n="howItWorks.step2Title">Create Your Account</h3>
-              <p class="step-description" data-i18n="howItWorks.step2Desc">Choose whether you are a rancher or a veterinarian and accept the Terms of Service.</p>
-            </div>
-            <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
-          </div>
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <div class="step-content">
-              <div class="step-icon"><i class="bi bi-house"></i></div>
-              <h3 class="step-title" data-i18n="howItWorks.step3Title">Register Your Livestock</h3>
-              <p class="step-description" data-i18n="howItWorks.step3Desc">Add your farms, corrals and animals.</p>
-            </div>
-            <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
-          </div>
-          <div class="step-card">
-            <div class="step-number">04</div>
-            <div class="step-content">
-              <div class="step-icon"><i class="bi bi-graph-up"></i></div>
-              <h3 class="step-title" data-i18n="howItWorks.step4Title">Keep Everything Up to Date</h3>
-              <p class="step-description" data-i18n="howItWorks.step4Desc">Record health events, activities and finances from your phone.</p>
-            </div>
-            <div class="step-check"><i class="bi bi-check-circle-fill"></i></div>
-          </div>
-        </div>
-        <div class="how-it-works-cta">
-          <div class="how-it-works-cta-content">
-            <i class="bi bi-lightning-charge"></i>
-            <div>
-              <h4 data-i18n="howItWorks.ctaTitle">Ready to start?</h4>
-              <p data-i18n="howItWorks.ctaDesc">Download the app and create your account.</p>
-            </div>
-            <a href="#download" class="btn btn-success" data-i18n="howItWorks.ctaButton">Download the App</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="download" id="download">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-download"></i>
-            <span data-i18n="download.subtitle">Download</span>
-          </span>
-          <h2 class="section-title" data-i18n="download.title">Get the AniTec App</h2>
-          <p class="section-description" data-i18n="download.description">AniTec is available for Android. A cross-platform version for Android and iOS is on its way.</p>
-        </div>
-        <div class="download-grid">
-          <div class="download-card">
-            <div class="download-icon"><i class="bi bi-android2"></i></div>
-            <h3 data-i18n="download.androidTitle">Android</h3>
-            <p data-i18n="download.androidDesc">Distributed to testers through Firebase App Distribution. Request access from the team to install it.</p>
-            <!-- TODO: replace "#download" with the Firebase App Distribution invitation link. -->
-            <a href="#download" class="btn btn-success" data-i18n="download.androidButton">Get the Android App</a>
-          </div>
-          <div class="download-card coming-soon">
-            <div class="download-icon"><i class="bi bi-apple"></i></div>
-            <h3 data-i18n="download.flutterTitle">iOS and Flutter</h3>
-            <p data-i18n="download.flutterDesc">We are building a Flutter version that will run on Android and iOS.</p>
-            <span class="btn btn-secondary disabled" aria-disabled="true" data-i18n="download.flutterButton">Coming soon</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">
-            <i class="bi bi-tag"></i>
-            <span data-i18n="pricing.subtitle">Plans</span>
-          </span>
-          <h2 class="section-title" data-i18n="pricing.title">Plans for every role</h2>
-          <p class="section-description" data-i18n="pricing.description">Monthly plans in Peruvian soles. Subscription payments inside the app are coming soon.</p>
-        </div>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <div class="pricing-icon"><i class="bi bi-sun"></i></div>
-              <h3 class="pricing-title" data-i18n="pricing.basic">Rancher Basic</h3>
-              <p class="pricing-description" data-i18n="pricing.basicDesc">To start digitizing a small herd</p>
-            </div>
-            <div class="pricing-price">
-              <span class="currency">S/</span>
-              <span class="amount">49</span>
-              <span class="period" data-i18n="pricing.period">/month</span>
-            </div>
-            <span class="pricing-price-note" data-i18n="pricing.billed">Billed monthly</span>
-            <ul class="pricing-features">
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.upTo80" data-i18n-html>Up to <strong>80 animals</strong></span></li>
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.allFeatures">All app features</span></li>
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.languages">English and Spanish</span></li>
-            </ul>
-            <a href="#download" class="btn btn-secondary pricing-btn" data-i18n="pricing.button">Get the App</a>
-          </div>
-          <div class="pricing-card featured">
-            <div class="pricing-badge">
-              <i class="bi bi-star-fill"></i>
-              <span data-i18n="pricing.mostPopular">Most Popular</span>
-            </div>
-            <div class="pricing-header">
-              <div class="pricing-icon"><i class="bi bi-cloud-sun"></i></div>
-              <h3 class="pricing-title" data-i18n="pricing.pro">Rancher Pro</h3>
-              <p class="pricing-description" data-i18n="pricing.proDesc">For larger herds</p>
-            </div>
-            <div class="pricing-price">
-              <span class="currency">S/</span>
-              <span class="amount">99</span>
-              <span class="period" data-i18n="pricing.period">/month</span>
-            </div>
-            <span class="pricing-price-note" data-i18n="pricing.billed">Billed monthly</span>
-            <ul class="pricing-features">
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.upTo250" data-i18n-html>Up to <strong>250 animals</strong></span></li>
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.allFeatures">All app features</span></li>
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.languages">English and Spanish</span></li>
-            </ul>
-            <a href="#download" class="btn btn-success pricing-btn" data-i18n="pricing.button">Get the App</a>
-          </div>
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <div class="pricing-icon"><i class="bi bi-lightning-charge"></i></div>
-              <h3 class="pricing-title" data-i18n="pricing.vet">Veterinarian Professional</h3>
-              <p class="pricing-description" data-i18n="pricing.vetDesc">For professionals who follow several clients</p>
-            </div>
-            <div class="pricing-price">
-              <span class="currency">S/</span>
-              <span class="amount">129</span>
-              <span class="period" data-i18n="pricing.period">/month</span>
-            </div>
-            <span class="pricing-price-note" data-i18n="pricing.billed">Billed monthly</span>
-            <ul class="pricing-features">
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.upTo1000" data-i18n-html>Up to <strong>1,000 animals</strong></span></li>
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.clients">Clients and patients</span></li>
-              <li><i class="bi bi-check-circle-fill"></i><span data-i18n="pricing.allFeatures">All app features</span></li>
-            </ul>
-            <a href="#download" class="btn btn-secondary pricing-btn" data-i18n="pricing.button">Get the App</a>
-          </div>
-        </div>
-        <div class="pricing-footer">
-          <p><i class="bi bi-credit-card"></i> <span data-i18n="pricing.note">Payments are processed by Stripe and currently run in test mode.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-about">
-            <a href="index.html" class="logo">
-              <img src="assets/images/logo.png" alt="AniTec Logo" />
-              <span class="logo-text">AniTec</span>
-            </a>
-            <p class="footer-description" data-i18n="footer.desc">AniTec is a livestock management app for ranchers and veterinarians. Register farms and animals, keep health records and keep working with limited signal.</p>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.product">Product</h4>
-            <ul class="footer-links">
-              <li><a href="index.html#features" data-i18n="footer.features">Features</a></li>
-              <li><a href="index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
-              <li><a href="index.html#download" data-i18n="footer.download">Download</a></li>
-              <li><a href="assets/pages/ranchers.html" data-i18n="footer.forRanchers">For Ranchers</a></li>
-              <li><a href="assets/pages/veterinarians.html" data-i18n="footer.forVets">For Veterinarians</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.project">The Project</h4>
-            <ul class="footer-links">
-              <li><a href="assets/pages/about.html" data-i18n="footer.about">About Us</a></li>
-              <li><a href="https://github.com/ADM-1ACC0238-2620-13975-Grupo01" target="_blank" rel="noreferrer" data-i18n="footer.github">Source code</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title" data-i18n="footer.legal">Legal</h4>
-            <ul class="footer-links">
-              <li><a href="assets/pages/terms.html" data-i18n="footer.terms">Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p class="footer-copyright" data-i18n="footer.copyright">© 2026 AniTec. All rights reserved.</p>
-          <div class="footer-legal">
-            <a href="assets/pages/terms.html" data-i18n="footer.terms">Terms of Service</a>
-          </div>
-        </div>
-      </div>
+      <div class="wordmark" aria-hidden="true">AniTec</div>
     </footer>
+
     <script src="assets/scripts/i18n.js"></script>
-    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/home-i18n.js"></script>
+    <script src="assets/scripts/home.js"></script>
   </body>
 </html>

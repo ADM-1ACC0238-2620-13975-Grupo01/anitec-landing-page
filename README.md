@@ -12,6 +12,7 @@ anitec-landing-page/
 ├── README.md                   # Este archivo
 └── assets/
     ├── images/                 # Imágenes del proyecto
+    │   ├── photos/             # Fotos de Unsplash (ver CREDITS.md)
     │   ├── logo.png
     │   ├── logo.ico
     │   ├── about-us/
@@ -22,12 +23,17 @@ anitec-landing-page/
     ├── pages/                  # Páginas internas
     │   ├── about.html
     │   ├── ranchers.html
+    │   ├── terms.html
     │   └── veterinarians.html
     ├── scripts/                # JavaScript
     │   ├── i18n.js
-    │   └── script.js
+    │   ├── home-i18n.js        # Textos del rediseño de la página principal
+    │   ├── home.js             # Intro, menú flotante, scroll y showcase de la página principal
+    │   └── script.js           # Anterior; ninguna página lo usa ya
     └── styles/                 # Estilos CSS
-        └── styles.css
+        ├── home.css            # Base del rediseño (colores, tipografía, menú, botones, pie) y página principal
+        ├── inner.css           # Componentes de las páginas internas
+        └── styles.css          # Anterior; ninguna página lo usa ya
 ```
 
 ## Requisitos
@@ -53,17 +59,17 @@ npx serve
 
 ### Colores
 
-Los colores principales están definidos en `assets/styles/styles.css` en la sección `:root`:
+Los colores principales están definidos en `assets/styles/home.css` en la sección `:root`:
 
 | Variable | Color | Uso |
 |---------|-------|-----|
-| `--primary-brown` | #925930 | Color primario marrón |
-| `--primary-green` | #79B267 | Color primario verde |
-| `--primary-cream` | #f5f0e6 | Color de fondo crema |
-| `--secondary-brown` | #A3794F | Color secundario marrón |
-| `--secondary-green` | #A3C4A8 | Color secundario verde |
-| `--text-dark` | #1a1a1a | Color de texto oscuro |
-| `--text-light` | #5a554f | Color de texto claro |
+| `--espresso` | #1d130e | Fondo principal oscuro |
+| `--espresso-2` | #2a1b13 | Tarjetas y secciones alternas |
+| `--cream` | #f5f0e6 | Texto y botones claros |
+| `--sand` | #d1bfa5 | Acentos de titulares |
+| `--brown` | #925930 | Bloque del veterinario |
+| `--green` | #79b267 | Acentos y bloque del ganadero |
+| `--green-deep` | #3b7334 | Verde con contraste AA para texto sobre claro |
 
 ### Imágenes
 
