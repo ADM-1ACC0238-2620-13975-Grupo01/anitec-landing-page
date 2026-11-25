@@ -15,16 +15,15 @@
 }
 .page-title {
   margin: 20px 0 22px;
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5.8vw, 4.8rem);
   line-height: 0.98;
   letter-spacing: -0.035em;
-  font-variation-settings: "opsz" 144;
 }
 .page-title em {
-  font-style: italic;
-  color: var(--sand);
+  font-style: normal;
+  color: var(--green);
 }
 .page-hero .hero-lead + .hero-lead {
   margin-top: 14px;
@@ -76,9 +75,9 @@
 }
 .stat-n {
   display: block;
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: 2.6rem;
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: 2.3rem;
   line-height: 1;
   letter-spacing: -0.03em;
 }
@@ -114,9 +113,9 @@
   color: var(--muted);
 }
 .logos-x {
-  font-family: var(--serif);
+  font-family: var(--head);
   font-size: 2.4rem;
-  font-weight: 300;
+  font-weight: 600;
   color: var(--sand);
 }
 .mv-grid {
@@ -144,8 +143,8 @@
 }
 .mv-card h3 {
   margin: 20px 0 10px;
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--head);
+  font-weight: 600;
   font-size: 1.8rem;
   letter-spacing: -0.02em;
 }
@@ -240,8 +239,8 @@
   color: var(--green);
 }
 .team-name {
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--head);
+  font-weight: 600;
   font-size: 1.4rem;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -259,8 +258,8 @@
   border-color: transparent;
 }
 .team-follow h4 {
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--head);
+  font-weight: 600;
   font-size: 1.9rem;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -279,8 +278,8 @@
   align-items: center;
 }
 .product-text {
-  font-family: var(--serif);
-  font-weight: 300;
+  font-family: var(--head);
+  font-weight: 500;
   font-size: clamp(1.25rem, 2.2vw, 1.7rem);
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -382,9 +381,9 @@
 }
 .module h3 {
   margin: 10px 0 12px;
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
   letter-spacing: -0.03em;
   line-height: 1.05;
 }
@@ -416,8 +415,8 @@
   border-color: rgba(245, 240, 230, 0.35);
 }
 .func-card h3 {
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--head);
+  font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: -0.02em;
 }
@@ -502,9 +501,9 @@
   border: 1px solid var(--line);
 }
 .terms-card h1 {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 18px;
@@ -519,8 +518,8 @@
 }
 .terms-card h2 {
   margin: 32px 0 8px;
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--head);
+  font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: -0.02em;
 }
